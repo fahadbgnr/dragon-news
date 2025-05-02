@@ -2,6 +2,9 @@ import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layout/HomeLayout";
 import Home from "../pages/Home";
 import CategoryNews from "../pages/CategoryNews";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
+import AuthLayout from "../layout/AuthLayout";
 
 const router = createBrowserRouter(
     [
@@ -22,7 +25,18 @@ const router = createBrowserRouter(
         },
         {
             path: "/auth",
-            element: <h2>Authentication layout</h2>
+            element: <AuthLayout></AuthLayout>,
+            children:[
+                {
+                    path:'/auth/login',
+                    element:<LoginPage></LoginPage>
+                },
+                {
+                    path:'/auth/register',
+                    element:<RegisterPage></RegisterPage>
+                }
+            ]
+            
         },
         {
             path: "/news",
