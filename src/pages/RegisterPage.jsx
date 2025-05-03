@@ -1,37 +1,50 @@
 import React, { use, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const RegisterPage = () => {
     const [nameError, setNameError] = useState('');
-    const {createUser, setUser}= use(AuthContext);
+    const { createUser, setUser, updateUser } = use(AuthContext);
+    const navigate = useNavigate();
+
     const handleRegister = (e) => {
         e.preventDefault();
-        console.log(e.target);
+        // console.log(e.target);
         const form = e.target;
         const name = form.name.value;
-        if(name.length <5){
+        if (name.length < 5) {
             setNameError("Name Should be more then 5 character");
             return;
-        }else{
+        } else {
             setNameError("");
         }
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({name, photo, email, password});
+        // console.log({ name, photo, email, password });
         createUser(email, password)
-        .then(result=>{
-           const user = result.user;
-        //    console.log(user);
-        setUser(user);
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert(errorMessage);
-          });
-        
+            .then(result => {
+                const user = result.user;
+                //    console.log(user);
+                updateUser({ displayName: name, photoURL: photo }).then(() => {
+                    setUser({...user, displayName: name, photoURL: photo});
+                    navigate('/');
+
+                })
+                    .catch((error) => {
+                        console.log(error)
+                        setUser(user);
+                    });
+
+
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+
 
 
     }
@@ -61,7 +74,7 @@ const RegisterPage = () => {
                                 name='photo'
                                 className="input"
                                 placeholder="Photo Url"
-                                required 
+                                required
                             />
 
                             <label className="label">Email</label>
@@ -69,7 +82,7 @@ const RegisterPage = () => {
                                 type="email"
                                 name='email'
                                 className="input"
-                                placeholder="Email" 
+                                placeholder="Email"
                                 required
                             />
 
@@ -78,7 +91,7 @@ const RegisterPage = () => {
                                 type="password"
                                 name='password'
                                 className="input"
-                                placeholder="Password" 
+                                placeholder="Password"
                                 required
                             />
 
