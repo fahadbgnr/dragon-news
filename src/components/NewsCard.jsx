@@ -1,8 +1,10 @@
 import { FaEye, FaStar } from "react-icons/fa";
 import { BsShareFill, BsBookmarkFill } from "react-icons/bs";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
   const {
+    id,
     title,
     rating,
     total_view,
@@ -45,9 +47,9 @@ const NewsCard = ({ news }) => {
       {/* Description */}
       <p className="text-gray-700">
         {details.length > 250 ? details.slice(0, 250) + "..." : details}
-        <span className="text-blue-600 font-semibold cursor-pointer ml-2">
+        <Link to={`/news-details/${id}`} className="text-blue-600 font-semibold cursor-pointer ml-2">
           Read More
-        </span>
+        </Link>
       </p>
 
       {/* Footer */}
