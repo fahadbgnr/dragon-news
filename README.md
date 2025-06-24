@@ -46,7 +46,6 @@ Dragon News is a news web application where users can browse and read categorize
 - sweetalert2
 - react-icons
 - tailwindcss
-- @headlessui/react (if used)
 
 ---
 
