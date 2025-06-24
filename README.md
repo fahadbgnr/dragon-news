@@ -1,12 +1,66 @@
-# React + Vite
+# 🐉 Dragon News
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern news portal built with React and Firebase. It features category-based news, authentication, date-wise updates, and a clean, responsive UI.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live Site:** [https://dragon-news-3dfae.web.app](https://dragon-news-3dfae.web.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧾 Overview
+
+Dragon News is a news web application where users can browse and read categorized news articles, log in using Firebase Authentication, and enjoy a smooth user experience with dynamic content loading and routing. The application is mobile-responsive and optimized for modern browsers.
+
+---
+
+## ⚙️ Main Technologies Used
+
+- **React** (v19)
+- **React Router** (v7)
+- **Firebase Authentication**
+- **Tailwind CSS** with **DaisyUI**
+- **React Fast Marquee**
+- **Date-fns** for date formatting
+
+---
+
+## ✨ Features
+
+- 🔐 Firebase user authentication (Email/Password based)
+- 📰 Category-based dynamic news rendering
+- 📆 Date display using `date-fns`
+- 🧭 Client-side routing with `react-router`
+- 📱 Fully responsive layout using Tailwind CSS & DaisyUI
+- 💡 Breaking news ticker with `react-fast-marquee`
+- 🌙 Dark mode supported via DaisyUI
+
+---
+
+## 📦 Dependencies
+
+```json
+"dependencies": {
+  "@tailwindcss/vite": "^4.1.5",
+  "daisyui": "^5.0.32",
+  "date-fns": "^4.1.0",
+  "firebase": "^11.6.1",
+  "react": "^19.0.0",
+  "react-dom": "^19.0.0",
+  "react-fast-marquee": "^1.6.5",
+  "react-icons": "^5.5.0",
+  "react-router": "^7.5.3",
+  "tailwindcss": "^4.1.5"
+}
+
+
+🖥️ Run Locally
+Clone the Repository:
+git clone https://github.com/your-username/dragon-news.git
+cd dragon-news
+
+
+Install Dependencies:
+npm install
+
+Run the Project:
+npm run dev
