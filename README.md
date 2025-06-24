@@ -38,7 +38,7 @@ Dragon News is a news web application where users can browse and read categorize
 
 ## 📦 Dependencies
 
-```json
+
 "dependencies": {
   "@tailwindcss/vite": "^4.1.5",
   "daisyui": "^5.0.32",
@@ -52,14 +52,15 @@ Dragon News is a news web application where users can browse and read categorize
   "tailwindcss": "^4.1.5"
 }
 
+---
 
 ## 🖥️ Run Locally
 
 To run this project on your local machine, follow these steps:
 
-### 1️⃣ Clone the Repository
+ 1️⃣ Clone the Repository
 
-```bash
+bash
 git clone https://github.com/your-username/dragon-news.git
 cd dragon-news
 
