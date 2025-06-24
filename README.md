@@ -54,13 +54,17 @@ Dragon News is a news web application where users can browse and read categorize
 
 
 ## 🖥️ Run Locally
-Clone the Repository:
+
+To run this project on your local machine, follow these steps:
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/your-username/dragon-news.git
 cd dragon-news
 
-
-Install Dependencies:
+Install Dependencies
 npm install
 
-Run the Project:
+Run the Project
 npm run dev
