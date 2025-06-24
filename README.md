@@ -38,30 +38,23 @@ Dragon News is a news web application where users can browse and read categorize
 
 ## 📦 Dependencies
 
-```json
-"dependencies": {
-  "@tailwindcss/vite": "^4.1.5",
-  "daisyui": "^5.0.32",
-  "date-fns": "^4.1.0",
-  "firebase": "^11.6.1",
-  "react": "^19.0.0",
-  "react-dom": "^19.0.0",
-  "react-fast-marquee": "^1.6.5",
-  "react-icons": "^5.5.0",
-  "react-router": "^7.5.3",
-  "tailwindcss": "^4.1.5"
-}
+- react
+- react-dom
+- react-router-dom
+- firebase
+- react-toastify
+- sweetalert2
+- react-icons
+- tailwindcss
+- @headlessui/react (if used)
 
 ---
 
+
+
 ## 🖥️ Run Locally
 
-Clone the Repository
-git clone https://github.com/your-username/dragon-news.git
+```bash
+git clone https://github.com/fahadbgnr/dragon-news.git
 cd dragon-news
 
-Install Dependencies
-npm install
-
-Run the Project
-npm run dev
